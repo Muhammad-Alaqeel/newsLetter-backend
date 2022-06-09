@@ -20,16 +20,9 @@ module.exports = {
 
 
 
+            var transport = await sails.helpers.mynewtransport();
 
-            var transport = nodemailer.createTransport({
-                host: "smtp.mailtrap.io",
-                port: 2525,
-                auth: {
-                  user: "2d101feb1afb3a",
-                  pass: "8ca25170c6fcb5"
-                }
-              });
-
+            console.log(transport)
 
             var i=0;  
 
@@ -71,14 +64,7 @@ module.exports = {
 
 
 
-            var transport = nodemailer.createTransport({
-                host: "smtp.mailtrap.io",
-                port: 2525,
-                auth: {
-                  user: "2d101feb1afb3a",
-                  pass: "8ca25170c6fcb5"
-                }
-              });
+            var transport = await sails.helpers.mynewtransport();
 
 
 
